@@ -1,0 +1,15 @@
+http:
+    port: 5000
+
+firebase:
+    admin:
+        type: 'service_account'
+        projectId: 'project_id'
+        privateKeyId: 'x999x9xxx9x99xx9xx9xx999xx9x9xxx99xxx9'
+        privateKey: "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+        clientEmail: 'firebase-adminsdk-xxxxx@project_id.iam.gserviceaccount.com'
+        clientId: 'xxxxxxxxxxxxxxxxxxxxxxx'
+        authUri: 'https://accounts.google.com/o/oauth2/auth'
+        tokenUri: 'https://oauth2.googleapis.com/token'
+        authProviderX509CertUrl: 'https://www.googleapis.com/oauth2/v1/certs'
+        clientX509CertUrl: 'https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-xxxxx%40project_id.iam.gserviceaccount.com'
