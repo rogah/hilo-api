@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Asset implements Node {
+  id: ID!
+  ticket: String
+}
+
+interface Node {
+  id: ID!
+}
+
+type AssetEdge {
+  cursor: String!
+  node: Asset
+}
+
+type AssetsConnection {
+  edges: [AssetEdge]
+}
+
+type Query {
+  assets: AssetsConnection
+}

@@ -1,4 +1,0 @@
-type Asset {
-    id: ID!
-    name: String!
-}

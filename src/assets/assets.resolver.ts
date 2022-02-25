@@ -1,18 +1,15 @@
-import { Resolver, Query, Args } from '@nestjs/graphql';
-import { Asset } from '../graphql.schema';
-import { AssetsService } from './assets.service';
+import { Resolver, Query } from '@nestjs/graphql';
 
-@Resolver(Asset)
+import { Asset } from './models/asset.model';
+import { AssetsService } from './assets.service';
+import { AssetsConnection } from './models/asset.connection';
+
+@Resolver(of => Asset)
 export class AssetsResolver {
     constructor(private readonly assetsService: AssetsService) {}
 
-    @Query('assets')
-    async getCats() {
-        return this.assetsService.findAll();
-    }
-
-    @Query('asset')
-    async findOneById(@Args('id') id: string): Promise<Asset> {
-        return this.assetsService.findOneById(id);
+    @Query(returns => AssetsConnection, { nullable: true })
+    async assets(): Promise<AssetsConnection> {
+        return this.assetsService.findAndPaginate();
     }
 }
