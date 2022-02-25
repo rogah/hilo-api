@@ -19,7 +19,7 @@ import { GraphqlModule } from './graphql';
         }),
         GraphQLModule.forRoot<ApolloDriverConfig>({
             driver: ApolloDriver,
-            autoSchemaFile: 'schema.graphql',
+            autoSchemaFile: 'graphql/schema.graphql',
         }),
         GraphqlModule,
     ],

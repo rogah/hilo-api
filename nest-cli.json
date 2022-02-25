@@ -3,9 +3,14 @@
     "sourceRoot": "src",
     "compilerOptions": {
         "assets": [{
-            "include": "../config/*.yaml",
-            "exclude": "../config/example*.*yaml",
-            "outDir": "./dist/config"
-        }]
+                "include": "../config/*.yaml",
+                "exclude": "../config/example*.*yaml",
+                "outDir": "./dist/config"
+            },
+            {
+                "include": "../graphql/*.graphql",
+                "outDir": "./dist"
+            }
+        ]
     }
 }
